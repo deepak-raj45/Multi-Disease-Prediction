@@ -1,0 +1,214 @@
+
+{% block content %}
+{% if message %}
+        <div class="alert alert-danger">{{ message }}</div>
+	{% endif %}
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<title></title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+		<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+		<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="background-color: black !important;">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			   <span class="navbar-toggler-icon"></span>
+			 </button>
+			 <div class="collapse navbar-collapse" id="navbarNav">
+			   <ul class="navbar-nav ml-auto">
+				 <li class="nav-item active">
+				   <a class="nav-link" href="{{ url_for('diabetesPage') }}">DIABETES</a>
+				 </li>
+				 <li class="nav-item active">
+				   <a class="nav-link" href="{{ url_for('cancerPage') }}">CANCER</a>
+				 </li>
+				 <li class="nav-item active">
+					<a class="nav-link" href="{{ url_for('skinPage') }}">SKIN DISEASE</a>
+				 </li>
+			   </ul>
+			 </div>
+		   </nav>
+		   <style type="text/css">
+	
+			*{
+			 margin: 0;
+			 padding: 0;
+			 }
+			 body{
+					background-image: url('static/diabetes1.jpg');
+				background-position: center;
+					background-size:1950px;
+					font-family:'Times New Roman', Times, serif;
+				margin-top: 20px;
+			   }
+			   h1{
+				 font-family:'Times New Roman', Times, serif;
+			   }
+			   
+		  .regform{
+					   width: 800px;
+					   background-color: rgb(0,0,0,0.6);
+					font-family: 'Times New Roman', Times, serif;
+					   margin: auto;
+					   color: #FFFFFF;
+					   padding: 10px 0px 10px 0px;
+					   text-align: center;
+					   border-radius: 15px 15px 0px 0px;
+					   
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+				  }
+		  .main{
+				 background-color: rgb(0,0,0,0.5);
+				 width: 800px;
+				 margin: auto;
+			  }
+			form{
+				  padding: 10px;
+				 }
+		 #name{
+				 width: 100%;
+				 height: 100px;
+				}
+		 .name{
+				 margin-left: 25px;
+				 margin-top: 30px;
+				 width: 125px;
+				 color: white;
+				 font-size: 18px;
+				 font-weight: 700;
+			  }
+		 
+		.option{
+				 position:relative;
+				  left: 200px;
+				  top: -37px;
+				  line-height: 40px;
+				  width:532px;
+				  height: 40px;
+				  border-radius: 6px;
+				  padding: 0 22px;
+				  font-size: 16px;
+				  color: #555;
+				  outline: none;
+				  overflow: hidden;
+			   } 
+	   
+		 .optio{
+				 position:relative;
+				  left: 200px;
+				  top: -37px;
+				  line-height: 40px;
+				  width:480px;
+				  height: 40px;
+				  border-radius: 6px;
+				  padding: 0 22px;
+				  font-size: 16px;
+				  color: #555;
+				  outline: none;
+				  overflow: hidden;
+			   }
+			   
+		   button{
+				  background-color: #3BAF9F;
+				  display: block;
+				  margin: 20px 0px 0px 20px;
+				  text-align: center;
+				  border-radius: 12px;
+				  border: 2px solid #366473;
+				  padding: 14px 110px;
+				  outline: none;
+				  color: white;
+				  cursor: pointer;
+				  transition: 0.25px;
+				 }
+			button:hover{
+						  background-color: #5390F5;
+						}
+		   
+		   btn {
+				   border: none;
+				   font-family: 'Source Sans Pro', sans-serif;
+				   font-size: 18px;
+				   width: 200px;
+				   height: 48px;
+				   color: #000;
+				   background: #fff;
+				   cursor: pointer;
+				   display: inline-block;
+				   font-weight: 700;
+				   position: relative;
+				   outline: none;
+				   box-shadow: 0 6px #cecece;
+				   border-radius: 5px;
+				   margin-right: 6px;
+					   }
+	   
+		   btn:hover {
+				   background: #fff;
+				   outline: none;
+				   box-shadow: 0 4px #cecece;
+				   top: 2px;
+				   }
+	   
+		   btn:active {
+				   background: #fff;
+				   outline: none;
+				   box-shadow: 0 0 #cecece;
+				   top: 6px;
+				   }
+
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+  				-webkit-appearance: none;
+  				margin: 0;
+			}
+			.regform::-webkit-scrollbar {
+  display: none;
+}
+
+		   </style>
+	   </head>
+	   <body>
+		   <body>
+			   <br>
+		   <br>
+		   <br>
+		   <br>
+		   <div class="regform"> <h1 >DIABETES PREDICTION</h1></header></div>
+		   <div class ="main">
+			<form method="POST" action="{{url_for('predictPage')}}">
+			
+	   
+			 <h2 class="name">Pregnancies</h2>
+			 <input class="optio" name="Pregnancies" placeholder="No.of Pregnancies" type="number"> <br>
+	   
+			 <h2 class="name">Glucose</h2>
+			 <input class="optio" name="Glucose" placeholder="(mg/dL) eg.80" type="number"> <br>
+		  
+			 <h2 class="name">BloodPressure</h2>
+			 <input class="optio" name="BloodPressure" placeholder="(mmHg) eg.80" type="number"> <br>
+		  
+			 <h2 class="name"> BMI</h2>
+			 <input class="optio" name="BMI" placeholder="(kg/m^2)" type="number" step="any"  > <br>
+	   
+			 <h2 class="name">Pedigree</h2>
+			 <input class="optio" name="DiabetesPedigreeFunction" placeholder="eg.0.52" type="number" step="any" > <br>
+	   
+			 <h2 class="name">Age</h2>
+			 <input class="optio" name="Age" placeholder="nter age" type="number"> <br>
+	   
+			 <center> <button type="submit">Predict</button>
+			 </center>
+			   </form>
+		   </div>
+	   </body>
+	   </html>
+	   
+		{% endblock %}
